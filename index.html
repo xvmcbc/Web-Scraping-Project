@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Data Homework</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container text-center">
+      <h1 class="jumbotron">Mission to Mars Data</h1>
+      <div>
+      <div class="row">
+          {% for item in dict %}
+          <div class="col">
+              <div class="card" style="width: 20rem;">
+                  <div class="card-body">
+                    <h3>Latest Mars News:</h3>
+                    <h4 class="card-title">{{ item.news_title }}</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ item.news_p }}</h6>
+                  </div>
+              </div>
+            </div>
+            <div class="col">
+              <h3>Mars Facts</h3>
+              {% include 'mars_planet_profile.html' %}
+            </div>             
+            </div>
+      </div>
+      <div class="row">
+          <div class="col">
+            <p></p>
+            <hr>
+              <h3>Mars Weather</h3>
+                {{ item.mars_weather }}
+            <hr>
+          </div>
+      </div>
+      <div class="row">
+            <div class="col">
+                  <h3>Featured Mars Image:</h3>
+                  <img src = {{ item.featured_image_url }}>
+            </div>
+      </div>
+      <div class="row">
+            <div>
+             <div class="col"> 
+               <hr>
+                <h3>Hemisphere images:</h3>
+                {{item.hemispheres_images}}</div>
+              </div>
+      </div>
+            {% endfor %}
+      </div>
+    </div>
+  </body>
+
+</html>
