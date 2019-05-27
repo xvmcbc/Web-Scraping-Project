@@ -25,6 +25,8 @@ scrape_mars.py:         Código proveniente del Jupyter Notebook para realizar e
 
 
 ## ADICIONALES
+index.html: pagina resultado del render y que muestra los datos del scrapping
+
 mars_planet_profile.html: pagina generada a partir de los datos del dataframe de Marte (adicional)
 
 chromedriver.exe: Utilería para manipular con Splinter el browser y realizar el scrapping de las páginas visitadas
